@@ -155,6 +155,7 @@ declare module "freeclimb-request-types" {
         requestType: "getDigits"
         from: string
         to: string
+        callId: string
         callStatus: CallStatus
         direction: CallDirection
         conferenceId: string | null
