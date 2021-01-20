@@ -156,6 +156,7 @@ declare module "freeclimb-request-types" {
         from: string
         to: string
         callId: string
+        accountId: string
         callStatus: CallStatus
         direction: CallDirection
         conferenceId: string | null
