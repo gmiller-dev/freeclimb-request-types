@@ -1,7 +1,7 @@
 {
   "name": "freeclimb-request-types",
   "main": "index.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "typings": "index.d.ts",
   "repository": "https://github.com/gmiller-dev/freeclimb-request-types.git",
   "author": "Geoffrey Miller <gmiller@vailsys.com>",
