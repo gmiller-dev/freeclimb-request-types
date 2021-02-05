@@ -3,21 +3,21 @@ declare module "freeclimb-request-types" {
         body: T
     }
 
-    export  enum CallStatus {
-    Ringing = "ringing",
-    InProgress = "inProgress",
-    Completed =  "completed",
-    Busy =  "busy",
-    Failed = "failed",
-    NoAnswer = "noAnswer",
-    Canceled = "canceled",
-    }
+    export  type CallStatus =
+        | "ringing"
+        | "inProgress"
+        |  "completed"
+        |  "busy"
+        | "failed"
+        | "noAnswer"
+        | "canceled"
 
-    export  enum CallDirection {
-        Inbound = "inbound",
-        Outbound = "outbound",
-        OutboundDial = "outboundDial"
-    }
+
+    export  type CallDirection =
+        | "inbound"
+        | "outbound"
+        | "outboundDial"
+
 
     export  interface AddToConferenceNotificationBody {
         requestType: "addToConferenceNotification"
@@ -68,12 +68,11 @@ declare module "freeclimb-request-types" {
         parentCallId: string
     }
 
-    export  enum ConferenceStatus {
-        Empty = "empty",
-        Populated = "populated",
-        InProgress = "inProgress",
-        Terminated = "Terminated"
-    }
+    export  type ConferenceStatus =
+        | "empty"
+        | "populated"
+        | "inProgress"
+        | "Terminated"
 
     export  interface ConferenceRecordingStatusBody {
         requestType: "conferenceRecordingStatus"
@@ -142,11 +141,11 @@ declare module "freeclimb-request-types" {
         queueTime?: number
     }
 
-    export  enum GetDigitsReason {
-        FinishKey = "finishKey",
-        Timeout = "timeout",
-        MaxDigits = "maxDigits"
-    }
+    export  type GetDigitsReason =
+        | "finishKey"
+        | "timeout"
+        | "maxDigits"
+
     /**
      * The GetDigits command has completed and its actionUrl is being invoked.
      * A PerCL response is expected.
@@ -166,13 +165,13 @@ declare module "freeclimb-request-types" {
         parentCallId: string
     }
 
-    export  enum GetSpeechReason {
-        Error = "error",
-        Digit = "digit",
-        NoInput = "noInput",
-        NoMatch = "noMatch",
-        Recognition = "recognition"
-    }
+    export  type GetSpeechReason =
+        | "error"
+        | "digit"
+        | "noInput"
+        | "noMatch"
+        | "recognition"
+
     /**
      * The GetSpeech command has completed and its actionUrl is being invoked.
      * A PerCL response is expected.
@@ -237,7 +236,7 @@ declare module "freeclimb-request-types" {
         /**
          * String describing the direction of the Call. Will be inbound.
          */
-        direction: CallDirection.Inbound
+        direction: "inbound"
         /**
          * This is only populated if request pertains to a Conference. Otherwise, it is set to null.
          */
@@ -428,7 +427,7 @@ declare module "freeclimb-request-types" {
         /**
          * Value will be inbound to indicate the receipt of a message into the FreeClimb platform.
          */
-        direction: CallDirection.Inbound
+        direction: "inBound"
 
         /**
          * ID of the application to which the destination number is assigned.
@@ -447,16 +446,15 @@ declare module "freeclimb-request-types" {
     }
 
 
-    export  enum MessageStaus {
-        Queued = "queued",
-        Rejected = "rejected",
-        Sending = "sending",
-        Sent = "sent",
-        Failed = "failed",
-        Expired = "expired",
-        Deleted = "deleted",
-        Uknown = "unknown"
-    }
+    export  type MessageStaus =
+        "queued"
+        | "rejected"
+        |  "sending"
+        | "sent"
+        |  "failed"
+        |  "expired"
+        |  "deleted"
+        |  "unknown"
 
     /**
      * An outbound SMS has changed status and the notificationUrl from
@@ -499,7 +497,7 @@ declare module "freeclimb-request-types" {
         /**
          * Value will be outbound to indicate an outgoing SMS from FreeClimb.
          */
-        direction: CallDirection.Outbound
+        direction: "outBound"
 
         /**
          * ID of the application to which the destination number is assigned.
@@ -528,13 +526,13 @@ declare module "freeclimb-request-types" {
         phoneNumberId: string
     }
 
-    export  enum OutDialStatus {
-        InProgress = "inProgress",
-        Busy = "busy",
-        NoAnswer = "noAnswer",
-        Failed = "failed",
-        Canceled = "canceled",
-    }
+    export  type OutDialStatus =
+        "inProgress"
+        | "busy"
+        | "noAnswer"
+        | "failed"
+        | "canceled"
+
 
     /**
      * An outbound call initiated by the REST API has
@@ -1046,11 +1044,11 @@ declare module "freeclimb-request-types" {
         parentCallId: string
     }
 
-    export  enum QueueResult {
-        QueueFull = "queueFull",
-        Hangup = "hangup",
-        SystemError = "systemError",
-    }
+    export  type QueueResult =
+        | "queueFull"
+        | "hangup"
+        | "systemError"
+
 
     /**
      * A call has been removed from a queue and
