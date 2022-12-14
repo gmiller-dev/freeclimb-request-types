@@ -36,6 +36,8 @@ app.listen(port, () => {
 ```
 in addition type guards are also available
 ```ts
+import {isInboundCall} from "freeclimb-request-types";
+
 app.post('/callEntry', (req, res) => {
 
   if(isInboundCall(req.body)) {
