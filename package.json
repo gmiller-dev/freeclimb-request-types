@@ -20,7 +20,6 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.4",
