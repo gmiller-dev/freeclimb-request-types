@@ -14,6 +14,6 @@ module.exports = [
       { file: pkg.main, format: "cjs" },
       { file: pkg.module, format: "es" },
     ],
-    plugins: [typescript({ tsconfig: "./tsconfig.json" })],
+    plugins: [typescript({ tsconfig: "./tsconfig.json", outDir: "dist"})],
   },
 ];
