@@ -15,8 +15,10 @@ yarn install freeclimb-request-types
 ```ts
 import express, { Request } from 'express';
 import {InboundCallBody} from "freeclimb-request-types";
+import bodyParser from 'body-parser';
 
 const app = express()
+app.use(bodyParser.json());
 const port = 3000
 
 // Tells the code that the request body will of InboundCallBody type
