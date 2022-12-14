@@ -1,7 +1,7 @@
 {
   "name": "freeclimb-request-types",
   "description": "utilites and types for freeclimb requests to applications",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "repository": "https://github.com/gmiller-dev/freeclimb-request-types.git",
   "homepage": "https://github.com/gmiller-dev/freeclimb-request-types",
   "author": "Geoffrey Miller <gmiller@vailsys.com>",
