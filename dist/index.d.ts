@@ -20,9 +20,7 @@ export declare function isQueueWait(requestBody: any): requestBody is QueueWaitB
 export declare function isRecord(requestBody: any): requestBody is RecordBody;
 export declare function isRedirect(requestBody: any): requestBody is RedirectBody;
 export declare function isRemoveFromQueueNotification(requestBody: any): requestBody is RemoveFromQueueNotificationBody;
-export interface FCApiRequest<T> {
-    body: T;
-}
+export type FcReqestBody = AddToConferenceNotificationBody | AddToQueueNotifcationBody | CallStatusBody | ConferenceRecordingStatusBody | ConferenceStatusBody | CreateConferenceBody | DequeueBody | GetDigitsBody | GetSpeechBody | InboundCallBody | LeaveConferenceBody | MachineDetectedBody | MessageDeliveryBody | MessageStatusBody | OutDialApiConnectBody | OutDialConnectBody | OutDialStartBody | QueueWaitBody | RecordBody | RedirectBody | RemoveFromQueueNotificationBody;
 export type CallStatus = "ringing" | "inProgress" | "completed" | "busy" | "failed" | "noAnswer" | "canceled";
 export type CallDirection = "inbound" | "outbound" | "outboundDial";
 export interface AddToConferenceNotificationBody {

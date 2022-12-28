@@ -90,7 +90,6 @@ export function isRemoveFromQueueNotification(requestBody: any): requestBody is 
 //Types
 export type FcReqestBody = AddToConferenceNotificationBody
 | AddToQueueNotifcationBody
-| CallControlBody
 | CallStatusBody
 | ConferenceRecordingStatusBody
 | ConferenceStatusBody
