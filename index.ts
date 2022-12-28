@@ -88,9 +88,28 @@ export function isRemoveFromQueueNotification(requestBody: any): requestBody is 
 }
 
 //Types
-export  interface FCApiRequest<T> {
-    body: T
-}
+export type FcReqestBody = AddToConferenceNotificationBody
+| AddToQueueNotifcationBody
+| CallControlBody
+| CallStatusBody
+| ConferenceRecordingStatusBody
+| ConferenceStatusBody
+| CreateConferenceBody
+| DequeueBody
+| GetDigitsBody
+| GetSpeechBody
+| InboundCallBody
+| LeaveConferenceBody
+| MachineDetectedBody
+| MessageDeliveryBody
+| MessageStatusBody
+| OutDialApiConnectBody
+| OutDialConnectBody
+| OutDialStartBody
+| QueueWaitBody
+| RecordBody
+| RedirectBody
+| RemoveFromQueueNotificationBody
 
 export  type CallStatus =
     | "ringing"
