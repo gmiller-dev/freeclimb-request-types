@@ -67,6 +67,10 @@ function isRedirect(requestBody) {
 function isRemoveFromQueueNotification(requestBody) {
     return (requestBody === null || requestBody === void 0 ? void 0 : requestBody.requestType) === "removeFromQueueNotification";
 }
+function isFCRequestBody(requestBody) {
+    return (requestBody === null || requestBody === void 0 ? void 0 : requestBody.requestType) !== undefined
+        && typeof (requestBody === null || requestBody === void 0 ? void 0 : requestBody.requestType) === "string";
+}
 
 exports.isAddToConferenceNotification = isAddToConferenceNotification;
 exports.isAddToQueueNotification = isAddToQueueNotification;
@@ -76,6 +80,7 @@ exports.isConferenceRecordingStatus = isConferenceRecordingStatus;
 exports.isConferenceStatus = isConferenceStatus;
 exports.isCreateConference = isCreateConference;
 exports.isDequeue = isDequeue;
+exports.isFCRequestBody = isFCRequestBody;
 exports.isGetDigits = isGetDigits;
 exports.isGetSpeech = isGetSpeech;
 exports.isInboundCall = isInboundCall;

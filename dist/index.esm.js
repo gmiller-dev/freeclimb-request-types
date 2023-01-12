@@ -65,5 +65,9 @@ function isRedirect(requestBody) {
 function isRemoveFromQueueNotification(requestBody) {
     return (requestBody === null || requestBody === void 0 ? void 0 : requestBody.requestType) === "removeFromQueueNotification";
 }
+function isFCRequestBody(requestBody) {
+    return (requestBody === null || requestBody === void 0 ? void 0 : requestBody.requestType) !== undefined
+        && typeof (requestBody === null || requestBody === void 0 ? void 0 : requestBody.requestType) === "string";
+}
 
-export { isAddToConferenceNotification, isAddToQueueNotification, isCallControl, isCallStatus, isConferenceRecordingStatus, isConferenceStatus, isCreateConference, isDequeue, isGetDigits, isGetSpeech, isInboundCall, isLeaveConference, isMachineDetected, isMessageDelivery, isMessageStatus, isOutDialApiConnect, isOutDialConnect, isOutDialStart, isQueueWait, isRecord, isRedirect, isRemoveFromQueueNotification };
+export { isAddToConferenceNotification, isAddToQueueNotification, isCallControl, isCallStatus, isConferenceRecordingStatus, isConferenceStatus, isCreateConference, isDequeue, isFCRequestBody, isGetDigits, isGetSpeech, isInboundCall, isLeaveConference, isMachineDetected, isMessageDelivery, isMessageStatus, isOutDialApiConnect, isOutDialConnect, isOutDialStart, isQueueWait, isRecord, isRedirect, isRemoveFromQueueNotification };
